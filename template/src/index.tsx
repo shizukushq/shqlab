@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
 		<Sprite />
 		<App />
 		<Config />
-		<div className="fixed bottom-0 z-100 flex w-full items-center justify-center py-3 text-xs">
+		<div className="pointer-events-none fixed bottom-0 z-100 flex w-full items-center justify-center py-3 text-xs">
 			<span className="text-neutral-500 dark:text-neutral-400">
 				Made by{' '}
 				<a
@@ -23,6 +23,8 @@ createRoot(document.getElementById('root')!).render(
 				</a>
 			</span>
 		</div>
-		<span className="fixed top-4 left-4 font-medium">shq lab</span>
+		<span className="pointer-events-none fixed top-4 left-4 font-medium">
+			shq lab
+		</span>
 	</StrictMode>,
 );
