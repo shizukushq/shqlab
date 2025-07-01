@@ -29,7 +29,7 @@ Creation of a new laboratory:
 $ npm create shqlab@latest
 
 # bun
-$ bun create shqlab@latest
+$ bun create shqlab
 ```
 
 Creating configuration values in config.ts:
