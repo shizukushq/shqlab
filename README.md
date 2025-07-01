@@ -73,9 +73,9 @@ export default function App() {
           <motion.div
             key="cube"
             transition={{ type: 'spring', duration: 0.3, bounce: 0 }}
-            initial={{ transform: `scale(${0})` }}
+            initial={{ transform: 'scale(0)' }}
             animate={{ transform: `scale(${scale})` }}
-            exit={{ transform: `scale(${0})` }}
+            exit={{ transform: 'scale(0)' }}
             className="flex size-45 items-center justify-center rounded-4xl bg-amber-600"
           >
             <span className="text-2xl text-neutral-900">{text}</span>
