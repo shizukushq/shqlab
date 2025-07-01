@@ -17,6 +17,7 @@ https://github.com/user-attachments/assets/5255164a-2e40-4cb6-bbfd-ab72e33437d1
 - Using [nanostores](https://github.com/nanostores/nanostores) for convenient configuration
 - Automatic generation of configuration parameters
   - Just create the atoms in the configuration file
+  - 3 types of configuration values: slider/switcher/input
 - Pre-installed and configured [Tailwind](https://tailwindcss.com/) + [Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 - Dark/Light mode
 
@@ -41,21 +42,8 @@ export const $text = atom<string>('text');
 
 const config: ConfigItem[] = [
 	{ id: 'showCube', name: 'Show Cube', type: 'switch', value: $show },
-  {
-    id: 'sizeCube',
-    name: 'Size',
-    type: 'slider',
-    value: $scale,
-    min: 1,
-    max: 5,
-    step: 0.5,
-  },
-  {
-    id: 'text',
-    name: 'Text',
-    type: 'text',
-    value: $text,
-  }
+	{ id: 'sizeCube', name: 'Size', type: 'slider', value: $scale, min: 1, max: 5, step: 0.5 },
+	{ id: 'text', name: 'Text', type: 'text', value: $text }
 ];
 ```
 And usage this values in your example/test:
