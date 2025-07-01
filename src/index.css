@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+	@apply bg-neutral-100 text-neutral-900 antialiased select-none dark:bg-neutral-900 dark:text-neutral-100;
+	font-family: IBM Plex Mono;
+}
+
+body {
+	@apply h-screen w-screen overflow-hidden;
+}
+
+html.bg-grid body {
+	background:
+		linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+		linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+		linear-gradient(-90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+		linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+		linear-gradient(
+			transparent 3px,
+			#f2f2f2 3px,
+			#f2f2f2 78px,
+			transparent 78px
+		),
+		linear-gradient(-90deg, #aaa 1px, transparent 1px),
+		linear-gradient(
+			-90deg,
+			transparent 3px,
+			#f2f2f2 3px,
+			#f2f2f2 78px,
+			transparent 78px
+		),
+		linear-gradient(#aaa 1px, transparent 1px), #f2f2f2;
+	background-size:
+		4px 4px,
+		4px 4px,
+		80px 80px,
+		80px 80px,
+		80px 80px,
+		80px 80px,
+		80px 80px,
+		80px 80px;
+	background-position: 5% 5%;
+}
+
+html.dark.bg-grid body {
+	background:
+		linear-gradient(-90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(-90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+		linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+		linear-gradient(
+			transparent 3px,
+			#171717 3px,
+			#171717 78px,
+			transparent 78px
+		),
+		linear-gradient(-90deg, #444 1px, transparent 1px),
+		linear-gradient(
+			-90deg,
+			transparent 3px,
+			#171717 3px,
+			#171717 78px,
+			transparent 78px
+		),
+		linear-gradient(#444 1px, transparent 1px), #171717;
+	background-size:
+		4px 4px,
+		4px 4px,
+		80px 80px,
+		80px 80px,
+		80px 80px,
+		80px 80px,
+		80px 80px,
+		80px 80px;
+	background-position: 5% 5%;
+}
