@@ -1,5 +1,5 @@
-import { useLayoutEffect } from 'react';
 import { useTheme } from './hooks/useTheme';
+import { useLayoutEffect } from 'react';
 import { Pane } from 'tweakpane';
 
 export default function App() {
@@ -30,8 +30,8 @@ export default function App() {
 	}, []);
 
 	return (
-		<main className="relative flex h-full w-full items-center justify-center">
+		<div className="relative flex h-full w-full items-center justify-center">
 			{/**/}
-		</main>
+		</div>
 	);
 }

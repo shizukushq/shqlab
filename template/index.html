@@ -12,20 +12,23 @@
 		/>
 	</head>
 	<body>
-  	<span className="pointer-events-none fixed bottom-3 left-1/2 -translate-x-1/2 text-xs text-neutral-500 dark:text-neutral-400">
-  		Made by{' '}
-  		<a
-  			href="https://github.com/shizukushq"
-  			target="_blank"
-  			draggable="false"
-  			className="text-neutral-900 dark:text-neutral-100"
-  		>
-  			shizuku
-  		</a>
-  	</span>
-  	<span className="pointer-events-auto fixed top-4 left-4 font-medium">
-  		shq-lab
-  	</span>
+		<span
+			class="pointer-events-none fixed bottom-3 left-1/2 z-100 -translate-x-1/2 text-xs text-neutral-500 dark:text-neutral-400"
+		>
+			Made by
+			<a
+				href="https://github.com/shizukushq"
+				target="_blank"
+				draggable="false"
+				class="pointer-events-auto text-neutral-900 dark:text-neutral-100"
+			>
+				shizuku
+			</a>
+		</span>
+		<span class="pointer-events-none fixed top-4 left-4 z-100 font-medium">
+			shq-lab
+		</span>
+		<main id="root" class="z-0 h-screen w-screen"></main>
 		<script type="module" src="/src/index.tsx"></script>
 		<script>
 			document.documentElement.classList.toggle(
