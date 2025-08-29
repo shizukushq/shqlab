@@ -3,7 +3,7 @@
 
 :root {
 	@apply bg-neutral-100 text-neutral-900 antialiased select-none dark:bg-neutral-900 dark:text-neutral-100;
-	font-family: IBM Plex Mono;
+	font-family: Geist Mono;
 }
 
 body {
