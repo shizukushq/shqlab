@@ -100,13 +100,13 @@ const abort = () => {
 
   const targetDir = path.join(process.cwd(), projectName);
   if (fs.existsSync(targetDir) && fs.readdirSync(targetDir).length) {
-    console.log("❌ target directory exists and is not empty");
+    console.log("⚠️ target directory exists and is not empty");
     process.exit(1);
   }
 
   const templateDir = path.join(__dirname, "template", framework);
   if (!fs.existsSync(templateDir)) {
-    console.log(`❌ template not found: ${templateDir}`);
+    console.log(`⚠️ template not found: ${templateDir}`);
     process.exit(1);
   }
 
@@ -121,5 +121,5 @@ const abort = () => {
       process.exit(1);
     }
   }
-  console.log(`✨ shqlab "${projectName}" ready! (${framework})`);
+  console.log(`\n✨ shqlab "${projectName}" ready!`);
 })();
