@@ -4,5 +4,8 @@
   "bin": {
     "create-shqlab": "./cli.js"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
 }
