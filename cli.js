@@ -111,7 +111,6 @@ const abort = () => {
   }
 
   copyDir(templateDir, targetDir);
-  console.log(`✨ shqlab "${projectName}" ready! (${framework})`);
 
   if (doInstall) {
     const pm = resolvePm();
@@ -121,8 +120,6 @@ const abort = () => {
       console.log("⚠️ install failed");
       process.exit(1);
     }
-    console.log("✅ deps installed");
   }
-
-  console.log("🚀 done");
+  console.log(`✨ shqlab "${projectName}" ready! (${framework})`);
 })();
