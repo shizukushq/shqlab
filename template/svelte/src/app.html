@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="bg-grid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <span class="pointer-events-none fixed top-4 left-4 z-100 font-medium">shq-lab</span>
+    <span
+      class="pointer-events-none fixed bottom-3 left-1/2 z-100 -translate-x-1/2 text-xs text-neutral-500 dark:text-neutral-400"
+    >
+      Made by
+      <a
+        href="https://github.com/shizukushq"
+        target="_blank"
+        draggable="false"
+        class="pointer-events-auto font-medium text-neutral-900 dark:text-neutral-100"
+      >
+        shizuku
+      </a>
+    </span>
+    <main class="z-0 h-screen w-screen">%sveltekit.body%</main>
+    <script>
+      document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark');
+      document.documentElement.classList.toggle('grid', localStorage.getItem('grid') === 'true');
+    </script>
+  </body>
+</html>
