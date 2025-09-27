@@ -1,9 +1,13 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-sans: Geist;
+  --font-mono: Geist Mono;
+}
 
 :root {
-  @apply bg-neutral-100 text-neutral-900 antialiased select-none dark:bg-neutral-900 dark:text-neutral-100;
-  font-family: Geist Mono;
+  @apply bg-neutral-100 font-mono text-neutral-900 antialiased select-none dark:bg-neutral-900 dark:text-neutral-100;
+  font-optical-sizing: auto;
 }
 
 body {
