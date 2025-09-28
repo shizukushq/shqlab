@@ -4,6 +4,10 @@
   --font-sans: Geist;
   --font-mono: Geist Mono;
 }
+.svelte-tweakpane-ui {
+  font-family: Geist Mono !important;
+  font-optical-sizing: auto !important;
+}
 
 :root {
   @apply bg-neutral-100 font-mono text-neutral-900 antialiased select-none dark:bg-neutral-900 dark:text-neutral-100;
