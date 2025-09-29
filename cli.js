@@ -68,6 +68,11 @@ const abort = () => {
 };
 
 (async () => {
+  const args = process.argv.slice(2);
+  let forcedFramework = null;
+  if (args.includes("-s")) forcedFramework = "svelte";
+  if (args.includes("-r")) forcedFramework = "react";
+
   const { projectName, framework, doInstall } = await prompts(
     [
       {
@@ -77,7 +82,7 @@ const abort = () => {
         validate: (v) => (v && v.trim().length ? true : "invalid name"),
       },
       {
-        type: "select",
+        type: forcedFramework ? null : "select",
         name: "framework",
         message: "Choose framework",
         choices: [
@@ -98,13 +103,15 @@ const abort = () => {
     { onCancel: abort },
   );
 
+  const finalFramework = forcedFramework || framework;
+
   const targetDir = path.join(process.cwd(), projectName);
   if (fs.existsSync(targetDir) && fs.readdirSync(targetDir).length) {
     console.log("⚠️ target directory exists and is not empty");
     process.exit(1);
   }
 
-  const templateDir = path.join(__dirname, "template", framework);
+  const templateDir = path.join(__dirname, "template", finalFramework);
   if (!fs.existsSync(templateDir)) {
     console.log(`⚠️ template not found: ${templateDir}`);
     process.exit(1);
