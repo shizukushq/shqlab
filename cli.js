@@ -70,8 +70,8 @@ const abort = () => {
 (async () => {
   const args = process.argv.slice(2);
   let forcedFramework = null;
-  if (args.includes("-s")) forcedFramework = "svelte";
-  if (args.includes("-r")) forcedFramework = "react";
+  if (args.includes("--s")) forcedFramework = "svelte";
+  if (args.includes("--r")) forcedFramework = "react";
 
   const { projectName, framework, doInstall } = await prompts(
     [
