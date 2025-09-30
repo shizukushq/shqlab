@@ -1,17 +1,15 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-  --font-sans: Geist;
-  --font-mono: Geist Mono;
+  --font-sans: Inter;
+  --font-mono: IBM Plex Mono;
 }
 .svelte-tweakpane-ui {
-  font-family: Geist Mono !important;
-  font-optical-sizing: auto !important;
+  font-family: IBM Plex Mono !important;
 }
 
 :root {
   @apply bg-neutral-100 font-mono text-neutral-900 antialiased select-none dark:bg-neutral-900 dark:text-neutral-100;
-  font-optical-sizing: auto;
 }
 
 body {
@@ -37,7 +35,15 @@ html.bg-grid body {
     80px 80px,
     80px 80px,
     80px 80px;
-  background-position: 5% 5%;
+  background-position:
+    calc(50% - 2px) calc(50% - 2px),
+    calc(50% - 2px) calc(50% - 2px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px);
 }
 html.dark.bg-grid body {
   background:
@@ -58,7 +64,15 @@ html.dark.bg-grid body {
     80px 80px,
     80px 80px,
     80px 80px;
-  background-position: 5% 5%;
+  background-position:
+    calc(50% - 2px) calc(50% - 2px),
+    calc(50% - 2px) calc(50% - 2px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px),
+    calc(50% - 40px) calc(50% - 40px);
 }
 
 /* tweakpane themes */
